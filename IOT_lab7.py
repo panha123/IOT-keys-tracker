@@ -11,8 +11,8 @@ from twilio.rest import Client
 # dbclient = InfluxDBClient('0.0.0.0', 8086, 'root', 'root', 'sensordata')
 
 # twilio setting
-account_sid = "AC42181481ffbaee9b0072e3264910606e"
-auth_token = "14e75d314498f4247ead22e4377f970a"
+account_sid = "account_sid here"
+auth_token = "account token here"
 user = Client(account_sid, auth_token)
 
 
@@ -24,8 +24,8 @@ def on_message(client, userdata, message):
         message = user.messages \
                     .create(
                          body="Hello from the key finder device!!!",
-                         from_='+19783212977',
-                         to='+19789350718'
+                         from_='+19998887777',
+                         to='+19998887777'
                     )
         print(message.sid)
 
